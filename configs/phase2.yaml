@@ -1,0 +1,33 @@
+experiment:
+  seeds: [1]
+  trials_per_seed: 2
+  domains: ["alcohol", "mature", "medical", "finance"]
+  drop_rates: [0.0, 0.3]
+  extractor_modes: ["action_aware"]
+  plan_names: ["adaptive_escalating"]
+  methods:
+    - "base_mlm_diffusion"
+    - "terminal_only_filter"
+    - "recoverability_guided"
+    - "retrieved_intent_aware"
+    - "fail_closed_if_retrieval_incomplete"
+
+model:
+  model_name: "bert-base-uncased"
+  device: "auto"
+  max_wordpiece_length: 1
+
+sampler:
+  block_size: 2
+  num_candidates: 6
+  resample_rounds: 5
+  temperature: 0.8
+  prior_strength: 3.5
+  model_score_weight: 1.0
+  intent_bonus: 6.0
+
+retrieval:
+  tfidf_stop_words: "english"
+
+outputs:
+  results_dir: "results"

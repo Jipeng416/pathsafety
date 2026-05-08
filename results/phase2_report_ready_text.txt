@@ -1,0 +1,16 @@
+=== PHASE 2 MASKED DENOISING INTERFACE SUMMARY ===
+
+| method | drop | retrieval_complete | turn1_violate | turn1_premature | clarify | deferral | end2end_safe | end2end_intent | safe_but_no_intent | avg_candidates | rejection_rate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| base_mlm_diffusion | 0.000 | 1.000 | 1.000 | 1.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 1.688 | 0.000 |
+| fail_closed_if_retrieval_incomplete | 0.000 | 1.000 | 0.000 | 0.000 | 1.000 | 0.000 | 1.000 | 1.000 | 0.000 | 1.573 | 0.207 |
+| recoverability_guided | 0.000 | 1.000 | 0.000 | 0.000 | 0.500 | 0.000 | 1.000 | 0.500 | 0.500 | 1.604 | 0.161 |
+| retrieved_intent_aware | 0.000 | 1.000 | 0.000 | 0.000 | 1.000 | 0.000 | 1.000 | 1.000 | 0.000 | 1.583 | 0.196 |
+| terminal_only_filter | 0.000 | 1.000 | 0.000 | 0.500 | 0.500 | 0.000 | 0.500 | 0.500 | 0.000 | 1.577 | 0.045 |
+
+=== INTERPRETATION ===
+- Phase 2 replaces the pure random controlled proposal proxy with a real Hugging Face masked-LM denoising scorer.
+- The sampler exposes intermediate masked states and candidate denoising states.
+- The recoverability monitor filters candidate states before committing to a denoising step.
+- This is still not the final large MDLM or LLaDA experiment. It is the working masked denoising interface needed before that integration.
+- The next step is to swap HFMaskedLMDenoisingSampler with an MDLM or LLaDA backend while keeping the same monitor interface.

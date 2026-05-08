@@ -1,0 +1,12 @@
+% Phase 2 masked denoising interface results
+\begin{tabular}{lrllrrrrrrrrrrrrrr}
+\toprule
+method & drop & extractor & plan & n & retrieval_complete & turn1_violate & turn1_premature & turn1_dead_end & clarify & deferral & context_update & end2end_safe & end2end_intent & safe_but_no_intent & avg_candidates & avg_allowed & rejection_rate \\
+\midrule
+base_mlm_diffusion & 0.000 & action_aware & adaptive_escalating & 2 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 1.688 & 1.688 & 0.000 \\
+fail_closed_if_retrieval_incomplete & 0.000 & action_aware & adaptive_escalating & 2 & 1.000 & 0.000 & 0.000 & 0.000 & 1.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 & 1.573 & 1.229 & 0.207 \\
+recoverability_guided & 0.000 & action_aware & adaptive_escalating & 2 & 1.000 & 0.000 & 0.000 & 0.000 & 0.500 & 0.000 & 0.500 & 1.000 & 0.500 & 0.500 & 1.604 & 1.323 & 0.161 \\
+retrieved_intent_aware & 0.000 & action_aware & adaptive_escalating & 2 & 1.000 & 0.000 & 0.000 & 0.000 & 1.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 & 1.583 & 1.260 & 0.196 \\
+terminal_only_filter & 0.000 & action_aware & adaptive_escalating & 2 & 1.000 & 0.000 & 0.500 & 0.500 & 0.500 & 0.000 & 0.500 & 0.500 & 0.500 & 0.000 & 1.577 & 1.506 & 0.045 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,6 @@
+method,drop,extractor,plan,n,retrieval_complete,turn1_violate,turn1_premature,turn1_dead_end,clarify,deferral,context_update,end2end_safe,end2end_intent,safe_but_no_intent,avg_candidates,avg_allowed,rejection_rate
+base_mlm_diffusion,0.0,action_aware,adaptive_escalating,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.6875,1.6875,0.0
+fail_closed_if_retrieval_incomplete,0.0,action_aware,adaptive_escalating,2,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,0.0,1.5729166666666665,1.2291666666666665,0.2068181818181818
+recoverability_guided,0.0,action_aware,adaptive_escalating,2,1.0,0.0,0.0,0.0,0.5,0.0,0.5,1.0,0.5,0.5,1.6041666666666665,1.3229166666666665,0.16136363636363635
+retrieved_intent_aware,0.0,action_aware,adaptive_escalating,2,1.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,0.0,1.5833333333333333,1.2604166666666665,0.19560994560994563
+terminal_only_filter,0.0,action_aware,adaptive_escalating,2,1.0,0.0,0.5,0.5,0.5,0.0,0.5,0.5,0.5,0.0,1.5773809523809526,1.505952380952381,0.04545454545454547

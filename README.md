@@ -57,3 +57,28 @@ After running the suite, the following files are produced:
 - end2end_intent: whether the original targeted request is completed after clarification.
 - safe_but_no_intent: safe but not useful for the user's original request.
 - retrieval_complete: whether both forbid and prerequisite clauses are retrieved.
+
+
+## Phase 2: Masked denoising interface
+
+Phase 2 adds a Hugging Face masked-LM-backed denoising sampler.
+
+Fast demo:
+
+    python scripts/run_phase2_diffusion_demo.py --config configs/phase2.yaml --fast
+
+Full demo:
+
+    python scripts/run_phase2_diffusion_demo.py --config configs/phase2.yaml
+
+Phase 2 outputs:
+
+    results/phase2_results.csv
+    results/phase2_per_trial.csv
+    results/phase2_examples.json
+    results/phase2_report_ready_text.txt
+    results/phase2_tables.tex
+
+Boundary:
+
+The current Phase 2 backend is a real masked-LM denoising backend, not yet the final large MDLM or LLaDA backend. The main contribution of this phase is the sampler-monitor interface.
