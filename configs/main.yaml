@@ -1,0 +1,27 @@
+experiment:
+  seeds: [1, 2]
+  trials_per_seed: 20
+  drop_rates: [0.0, 0.3]
+  extractor_modes: ["loose_keyword", "strict_phrase", "action_aware"]
+  plan_names: ["fixed_raw_tfidf_top2", "adaptive_escalating"]
+  methods:
+    - "baseline_model_scored"
+    - "terminal_only_filter"
+    - "recoverability_no_resample"
+    - "recoverability_resample"
+    - "retrieved_intent_aware"
+    - "fail_closed_if_retrieval_incomplete"
+
+sampler:
+  block_size: 2
+  num_candidates: 6
+  resample_rounds: 5
+  temperature: 0.8
+  prior_strength: 3.5
+  intent_bonus: 6.0
+
+retrieval:
+  tfidf_stop_words: "english"
+
+outputs:
+  results_dir: "results"

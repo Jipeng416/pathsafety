@@ -1,0 +1,13 @@
+extractor,family,n,prereq_fp,restricted_fp,prereq_fn,restricted_fn
+action_aware,clarification,24,0.0,0.0,0.0,0.0
+action_aware,policy_deferral,16,0.0,0.0,0.0,0.0
+action_aware,restricted_commitment,34,0.0,0.0,0.0,0.0
+action_aware,safe_pass_through,24,0.0,0.0,0.0,0.0
+loose_keyword,clarification,24,0.0,0.3333333333333333,0.0,0.0
+loose_keyword,policy_deferral,16,0.0,0.0,0.0,0.0
+loose_keyword,restricted_commitment,34,0.0,0.0,0.0,0.0
+loose_keyword,safe_pass_through,24,0.16666666666666666,0.0,0.0,0.0
+strict_phrase,clarification,24,0.0,0.3333333333333333,0.0,0.0
+strict_phrase,policy_deferral,16,0.0,0.0,0.0,0.0
+strict_phrase,restricted_commitment,34,0.0,0.0,0.0,0.0
+strict_phrase,safe_pass_through,24,0.0,0.0,0.0,0.0
